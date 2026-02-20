@@ -11,8 +11,7 @@ public class TwoSum {
             int sum = arr[i]+arr[j];
             if(sum==target){
                 System.out.print(i+","+j);
-                i++;
-                j--;
+                break;
             }
             else if(sum<target){
                 i++;
