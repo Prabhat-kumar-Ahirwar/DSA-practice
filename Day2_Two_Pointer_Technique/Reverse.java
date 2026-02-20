@@ -1,4 +1,4 @@
-package Day2;
+package Day2_Two_Pointer_Technique;
 
 public class Reverse {
     public static void main(String[] args) {
