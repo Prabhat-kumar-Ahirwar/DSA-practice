@@ -1,4 +1,4 @@
-package Day3_Hashmap;
+package Day3_Two_Pointer_Technique;
 
 import java.util.HashMap;
 
