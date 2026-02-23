@@ -1,5 +1,5 @@
 package Day5_Array_Three_pointer;
-
+//Brute Force approach ..
 public class Smallest_Subarray_with_Sum_Equal_Target {
     public static void main(String[] args) {
         int arr[]= {2,3,1,2,4};
