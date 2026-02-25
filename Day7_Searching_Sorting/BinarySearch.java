@@ -9,7 +9,7 @@ public class BinarySearch {
             System.out.println("Target not found");
         }
     }
-    
+
     public static boolean Searching(int arr[] ,int target){
         int n =arr.length;
         int low= 0;
