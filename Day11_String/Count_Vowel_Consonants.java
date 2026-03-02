@@ -1,4 +1,4 @@
-package Day11_Srting;
+package Day11_String;
 
 public class Count_Vowel_Consonants {
     public static void main(String[] args) {
