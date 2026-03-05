@@ -1,5 +1,5 @@
 package Day13_Array_Practice;
-
+//Count even and odd numbers
 public class CountEvenOdd {
     
     public static void main(String[] args) {
