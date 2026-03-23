@@ -1,4 +1,4 @@
-package  Day17_BS_1DArray;
+package Day17_BS_Array;
 
 public class BinarySearch{
 
