@@ -8,6 +8,7 @@ list.addFirst(20);
 list.addFirst(30);
 
 list.display();
+list.insertAtEnd(9);
     }
     public class Node{
         int data;
@@ -19,11 +20,28 @@ list.display();
     } 
     Node head;
 
-    //add new node
+    //add new node(Starting)
     public void addFirst(int data){
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
+    }
+
+// 🔹 Add at end 
+    public void insertAtEnd(int x) {
+        Node newNode = new Node(x);
+
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
     }
 
     //display
