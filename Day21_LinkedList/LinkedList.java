@@ -13,6 +13,9 @@ list.insertAtEnd(0);
 list.display();
 list.deleteFirst();
 list.display();
+
+list.deleteLast();
+list.display();
     }
     public class Node{
         int data;
@@ -54,6 +57,22 @@ list.display();
         }
         head = head.next;
     }
+
+    //delete last Node
+public void deleteLast(){
+    if(head == null ){
+        System.out.println("Empty List");
+    }
+    if(head.next == null){
+        head = null;
+        return ; 
+    }
+    Node temp = head;
+    while (temp.next.next != null) {
+        temp = temp.next;
+    }
+    temp.next=null;
+}
 
 
     //display
