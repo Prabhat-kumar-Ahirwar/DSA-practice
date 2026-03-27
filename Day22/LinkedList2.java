@@ -13,6 +13,7 @@ public class LinkedList2 {
         list.addLast(10);
         list.display();
         list.ListLength();
+        list.searhElement(100);
     }
     public class Node {
     int data; 
@@ -92,6 +93,27 @@ public class LinkedList2 {
    else{
     temp.next = temp.next.next;
    }
+     }
+
+     //search an  element 
+     public void searhElement(int target){
+        if(head == null){
+            System.out.println("List empty");
+        }
+        Node temp = head;
+        boolean flag = false;
+        while (temp.next != null) {
+            temp = temp.next;
+            if(temp.data == target){
+              flag =true;
+            }
+        }
+        if(flag){
+            System.out.println("Target found");
+        }
+        else{
+            System.out.println("Target Not Found");
+        }
      }
 
 
