@@ -16,6 +16,8 @@ list.display();
 
 list.deleteLast();
 list.display();
+list.deleteByValue(10);
+list.display();
     }
     public class Node{
         int data;
@@ -74,6 +76,30 @@ public void deleteLast(){
     temp.next=null;
 }
 
+
+public void deleteByValue(int value) {
+    if (head == null) {
+        System.out.println("List is empty");
+        return;
+    }
+
+    // If head needs to be deleted
+    if (head.data == value) {
+        head = head.next;
+        return;
+    }
+
+   Node temp = head; 
+   while (temp.next != null && temp.next.data !=value) {
+    temp = temp.next;    
+   }
+   if(temp.next == null){
+    System.out.println("Node Not Found");
+   }
+   else{
+    temp.next = temp.next.next;
+   }
+}
 
     //display
 
