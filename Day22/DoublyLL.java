@@ -9,6 +9,10 @@ public static void main(String[] args) {
     list.addFirst(20);
     list.addFirst(10);
     list.display();
+    list.addEnd(60);
+    list.display();
+    list.displayBackward();
+    
 }
 
 
@@ -24,7 +28,8 @@ public static void main(String[] args) {
         }
     }
     Node head;
-    //
+    //Method to add a node at the front of the list
+
     public void addFirst(int data){
         Node newNode = new Node(data);
         if(head == null){
@@ -36,12 +41,40 @@ public static void main(String[] args) {
             head = newNode;
         }
     }
-    //
+    //Method to add a node at the end of the list
+    public void addEnd(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+        }
+        else{
+            Node temp = head; 
+            while (temp.next !=null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            newNode.prev = temp;
+        }
+    }
+  public void displayBackward() {
+        if (head == null) return;        
+
+        Node temp = head;                
+        while (temp.next != null) {      
+            temp = temp.next;
+        }
+        // Now temp is the last node
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.prev;           
+        }
+        System.out.println();
+    }
 
     // display 
     public void display(){
         Node temp = head;
-        while (temp.next!=null) {
+        while (temp!=null) {
             System.out.print(temp.data+"->");
             temp = temp.next;           
         }
