@@ -43,9 +43,56 @@ public class LinkedList2 {
         }
         temp.next = last;
     }
+    //delete first node 
+     public void deleteFirst(){
+        if(head == null){
+            System.out.println("list is empty");
+        }
+        head = head.next;
+     }
 
+     //delete Last Node
+     public void deleteLast(){
+        if(head == null){
+            System.out.println("empty list");
+        }
+        if(head.next == null){
+            head = null;
+            return;
+        }
+        Node temp = head ; 
+        while (temp.next.next!= null) {{
+            temp = temp.next;
+        }
+        temp.next = null;
+            
+        }
+     }
 
+     //delete any node
+     public void deleteNode(int value){
+         if (head == null) {
+        System.out.println("List is empty");
+        return;
+    }
 
+    // If head needs to be deleted
+    if (head.data == value) {
+        head = head.next;
+        return;
+    }
+
+   Node temp = head; 
+   while (temp.next != null && temp.next.data !=value) {
+    temp = temp.next;    
+   }
+   if(temp.next == null){
+    System.out.println("Node Not Found");
+   }
+   else{
+    temp.next = temp.next.next;
+   }
+     }
 
 
     //display
