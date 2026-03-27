@@ -9,6 +9,10 @@ list.addFirst(30);
 
 list.display();
 list.insertAtEnd(9);
+list.insertAtEnd(0);
+list.display();
+list.deleteFirst();
+list.display();
     }
     public class Node{
         int data;
@@ -43,6 +47,14 @@ list.insertAtEnd(9);
 
         temp.next = newNode;
     }
+    //delete first 
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("Empty list");
+        }
+        head = head.next;
+    }
+
 
     //display
 
