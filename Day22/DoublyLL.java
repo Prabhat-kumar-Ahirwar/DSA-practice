@@ -11,7 +11,8 @@ public static void main(String[] args) {
     list.display();
     list.addEnd(60);
     list.display();
-    list.displayBackward();
+    list.deleteAtBeginning();
+    list.display();
     
 }
 
@@ -56,7 +57,18 @@ public static void main(String[] args) {
             newNode.prev = temp;
         }
     }
-  public void displayBackward() {
+
+//delete node from starting
+    public void deleteAtBeginning() {
+    if (head == null) {System.out.println("null");};
+
+    head = head.next;
+    if (head != null) {
+        head.prev = null;
+    }
+    }   
+
+    public void displayBackward() {
         if (head == null) return;        
 
         Node temp = head;                
