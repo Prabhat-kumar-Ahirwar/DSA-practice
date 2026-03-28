@@ -13,6 +13,8 @@ public static void main(String[] args) {
     list.display();
     list.deleteAtBeginning();
     list.display();
+    list.deleteAtEnd();
+    list.display();
     
 }
 
@@ -67,6 +69,21 @@ public static void main(String[] args) {
         head.prev = null;
     }
     }   
+
+        //delete node from end
+        public void deleteAtEnd(){
+            if(head == null){
+                System.out.println("Null");
+            }
+            if(head.next == null){
+                head = null;
+            }
+            Node temp = head;
+            while (temp.next !=null) {
+                temp = temp.next;
+            }
+            temp.prev.next = null;
+        }
 
     public void displayBackward() {
         if (head == null) return;        
