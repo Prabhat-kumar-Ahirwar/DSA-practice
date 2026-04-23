@@ -39,7 +39,6 @@ public class InorderDemo {
     }
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         Node root =null;
