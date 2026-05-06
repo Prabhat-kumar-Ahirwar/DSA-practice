@@ -4,64 +4,46 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class GraphList {
+public class BFSGraph {
 
     int vertices;
-    ArrayList<ArrayList<Integer>> adj;
+    ArrayList<ArrayList<Integer>> adj ; 
 
-    GraphList(int v){
+    BFSGraph(int v){
         vertices = v;
         adj = new ArrayList<>();
 
-        for(int i=0 ;i< v ;i++){
+        for(int i=0;i<v;i++){
             adj.add(new ArrayList<>());
         }
-        
     }
 
-    //add edges
-    void addedge(int u ,int v){
+    void addEdge(int u , int v){
         adj.get(u).add(v);
         adj.get(v).add(u);
     }
-
-    //print
-
-    void printfun(){
-        for(int i=0;i<vertices;i++){
-        System.out.print(i+" -> ");
-        for(int neig : adj.get(i)){
-            System.out.print(neig+" ");
-        }
-        System.out.println();
-    }
-    }
-    //BFS Traversal
-    void bfs(int start){
+    
+    void bfsTraversal(int start){
+        int v =vertices;
         Queue<Integer> q = new LinkedList<>();
-        boolean[] vis = new boolean[vertices];
+        boolean visted[] = new boolean[v]; 
 
+        visted[start] = true;
         q.add(start);
-        vis[start] = true;
 
         while (!q.isEmpty()) {
+            
             int u = q.poll();
-            System.out.print(u + " ");
-            for (int neigh : adj.get(u)) {
-                if(!vis[neigh]){
-                    vis[neigh] = true;
+            System.out.println(u + " ");
+            for(int neigh : adj.get(u)){
+                if(!visted[neigh]){
+                    visted[neigh] = true;
                     q.add(neigh);
                 }
-
             }
+
         }
-
-
-
     }
-
-
-
     public static void main(String[] args) {
         GraphList g = new GraphList(4);
         g.addedge(0,2);
