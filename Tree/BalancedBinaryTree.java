@@ -1,5 +1,4 @@
 package Tree;
-// File Name: BalancedBinaryTree.java
 
 class TreeNode {
     int val;
@@ -52,22 +51,11 @@ public class BalancedBinaryTree {
         return Math.max(left, right) + 1;
     }
 
-    // Main method
     public static void main(String[] args) {
 
         BalancedBinaryTree tree = new BalancedBinaryTree();
 
-        /*
-                  1
-                 / \
-                2   3
-               / \
-              4   5
-
-           This tree is balanced
-        */
-
-        TreeNode root = new TreeNode(1);
+           TreeNode root = new TreeNode(1);
 
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
